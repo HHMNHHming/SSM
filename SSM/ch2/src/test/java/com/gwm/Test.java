@@ -13,9 +13,13 @@ public class Test {
         testDIDao.sayHello();
 
         System.out.println("------------------------------");
-
-        //调用TestDIService的sayHello方法
+        //调用构造方法实现依赖注入的  TestDIService的sayHello方法
         TestDIService testDIService = (TestDIService) appCon.getBean("testDIService");
         testDIService.sayHello();
+
+        System.out.println("------------------------------");
+        //调用setter方法实现依赖注入的  TestDIService的sayHello方法
+        TestDIService testDIService2 = (TestDIService) appCon.getBean("testDIService2");
+        testDIService2.sayHello();
     }
 }

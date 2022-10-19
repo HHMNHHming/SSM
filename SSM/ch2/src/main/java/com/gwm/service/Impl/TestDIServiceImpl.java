@@ -14,6 +14,6 @@ public class TestDIServiceImpl implements TestDIService {
     public void sayHello(){
         //调用TestDIDao中的方法   这里的testDIDao是引用类型的属性
         testDIDao.sayHello();
-        System.out.println("这是TestDIService中的sayHello方法");
+        System.out.println("这是通过构造方法完成依赖注入的 TestDIService中的sayHello方法");
     }
 }
