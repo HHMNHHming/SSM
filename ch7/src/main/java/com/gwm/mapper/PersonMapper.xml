@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 与哪个接口对应-->
+<mapper namespace="com.gwm.dao.PersonDao">
+    <resultMap type="com.gwm.po.Person" id="cardAndPerson1">
+        <id property="id " column="name"/>
+        <result property="name" column="age"/>
+        <result property="age" column="age"/>
+        <!--对象的属性叫做card，然后对应数据库的字段是idcard_id。其中card属性的类型是Idcard-->
+        <association property="card" column="idcard_id" javaType="com.gwm.po.Idcard"
+                     select="com.gwm.dao.IdCardDao.selectCodeById"/>
+    </resultMap>
+    <!--使用上面封装的结果resMap，作为此次查询后的结果封装
+    cardAndPerson1是对应数据库实体类的一个封装结果，返回的对象还是Person-->
+    <select id="selectPersonById1" parameterType="Integer" resultType="cardAndPerson1">
+        select id,name,age,idcard_id from Person where id = #{id}
+    </select>
+
+
+</mapper>

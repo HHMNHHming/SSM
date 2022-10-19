@@ -1,0 +1,4 @@
+com\gwm\po\Idcard.class
+com\gwm\po\Person.class
+com\gwm\dao\IdCardDao.class
+com\gwm\dao\PersonDao.class
