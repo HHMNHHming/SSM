@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 构造方法实例化BeanCLass -->
+    <bean id="constructorInstance" class="com.gwm.instance.BeanClass"/>
+
+    <!-- 静态工厂实例化BeanClass -->
+    <bean id="staticFactoryInstance" class="com.gwm.instance.BeanStaticFactory" factory-method="createBeanClass"/>
+
+    <!-- 实例工厂实例化BeanClass -->
+        <!-- 1、配置工厂 -->
+    <bean id="beanInstanceFactory" class="com.gwm.instance.BeanInstanceFactory"/>
+        <!-- 2、指定配置工厂factory-bean的factory-method来实现实例化 -->
+    <bean id="instanceFactoryInstance" factory-bean="beanInstanceFactory"  factory-method="createBeanClassInstance"/>
+
+    <!-- BeanLife来模拟Bean声明周期的过程-->
+    <bean id="beanLife" class="com.gwm.life.BeanLife" init-method="initLife" destroy-method="destroyLife"/>
+
+
+
+    <!-- Bean管理 xml配置文件-->
+        <!-- 使用构造方法注入装配complexUser实例user -->
+    <bean id="user" class="com.gwm.assemble.ComplexUser">
+        <constructor-arg index="0" value="gwm"/>
+        <constructor-arg index="1">
+            <list>
+                <value>唱歌</value>
+                <value>跳舞</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <map>
+                <entry key="房产" value="河北"/>
+                <entry key="房产2" value="北京"/>
+            </map>
+        </constructor-arg>
+        <constructor-arg>
+            <set>
+                <value>小明</value>
+                <value>小王</value>
+            </set>
+        </constructor-arg>
+    </bean>
+
+        <!-- 使用setter方法注入装配complexUser实例user -->
+    <bean id="user2" class="com.gwm.assemble.ComplexUser">
+        <property name="name" value="wxh"/>
+        <property name="hobbyList">
+            <list>
+                <value>吃饭</value>
+                <value>睡觉</value>
+            </list>
+        </property>
+        <property name="residenceMap">
+            <map>
+                <entry key="房产" value="上海"/>
+                <entry key="房产2" value="兰州"/>
+            </map>
+        </property>
+        <property name="aliasSet">
+            <set>
+                <value>老王</value>
+                <value>漂亮鬼</value>
+            </set>
+        </property>
+    </bean>
+</beans>
