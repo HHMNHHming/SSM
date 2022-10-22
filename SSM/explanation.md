@@ -8,3 +8,5 @@ ch3:Bean实例化、Bean生命周期、Bean管理
 
 ​		由于在配置文件中配置了BeanClass类的实例化（id = "beanClass"），所以会调用BeanClass的无参构造函数。
 
+ch4:Aop、动态代理（JDK和Cglib）、~~Aspectj注解开发（这个俺不想写了···）~~
+
