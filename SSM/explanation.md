@@ -10,3 +10,5 @@ ch3:Bean实例化、Bean生命周期、Bean管理
 
 ch4:Aop、动态代理（JDK和Cglib）、~~Aspectj注解开发（这个俺不想写了···）~~
 
+ch5：Spring的  jdbcTemplate的简单用法    ~~引出的数据库事务管理我就想写了~~
+
