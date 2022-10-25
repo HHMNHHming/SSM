@@ -16,4 +16,5 @@
     <bean id="testDIService2" class="com.gwm.service.Impl.TestDIServiceImpl2">
         <property name="testDIDao" ref="myTestDIDao"/>
     </bean>
+
 </beans>
