@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--  这个不使用 spring-mybatis的配置方法，使用传统的连接数据库的配置的方法
+        这个是咱们原始配置数据库的方法  现在我们在spring中使用数据库，感觉可以使用Bean的思想把数据库注入到容器中管理
+    <configuration>
+        <environments default="development">
+            <environment id="development">
+                <transactionManager type="JDBC"/>
+                <dataSource type="POOLED">
+                    <property name="driver" value="com.mysql.jdbc.Driver"/>
+                    <property name="url" value="jdbc:mysql//localhost:3306/springTest?characterEncoding=utf8"/>
+                    <property name="username" value="root"/>
+                    <property name="password" value="123456"/>
+                </dataSource>
+            </environment>
+        </environments>
+        <mappers>
+            <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+        </mappers>
+    </configuration>-->
+
+    <!-- 请注意这个组件扫描非常地重要！！！！！！！ 和底下的bean对应 -->
+    <context:component-scan base-package="com.gwm"/>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <!-- 配置数据库驱动 url 数据库用户名 密码-->
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/spring_test?characterEncoding=utf8&amp;serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 下面这个配置Bean就相当于把dao层或者是service层的实现类注入Spring容器 -->
+    <!--  使用@Repository注解和@Service注解把实现类注入到Spring容器中去 -->
+<!--    <bean id="userDao" class="com.gwm.dao.Impl.UserDaoImpl"/>
+    <bean id="userService" class="com.gwm.service.Impl.UserServiceImpl"/>-->
+</beans>
