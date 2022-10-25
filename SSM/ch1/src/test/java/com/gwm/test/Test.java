@@ -14,7 +14,6 @@ public class Test {
         tt.sayHello();
     }
 
-
     //单纯使用spring写单元测试比较麻烦，建议使用springBoot的Junit测试
 /*    @Test
     public void test(){
