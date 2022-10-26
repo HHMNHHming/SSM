@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gwm.mapper.UserMapper">
+    <!-- 根据id查询一个用户的信息 -->
+    <select id="selectUserById" parameterType="Integer" resultType="com.gwm.po.User">
+        select * from User where id = #{id}
+    </select>
+    <!-- 查询所有用户的信息 -->
+    <select id="selectAllUser" resultType="com.gwm.po.User">
+        select * from User
+    </select>
+    <!-- 添加一个用户 -->
+    <insert id="addUser" parameterType="com.gwm.po.User">
+        insert into User where {name,sex,number} values (#{name},#{sex},#{number})
+    </insert>
+
+    <update id="updateUser" parameterType="com.gwm.po.User">
+        update User set name = #{name},sex = #{sex},number = #{number} where id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="Integer">
+        delete from User where id = id
+    </delete>
+
+</mapper>
