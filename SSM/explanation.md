@@ -12,4 +12,7 @@ ch4:Aop、动态代理（JDK和Cglib）、~~Aspectj注解开发（这个俺不�
 
 ch5:Spring对数据库的基本操作   jdbcTemplate的简单用法    ~~引出的数据库事务管理我就想写了~~
 
-ch6:Mybatis半自动映射（Sql映射文件）
+ch6:Mybatis半自动映射（Sql映射文件） Sql语句不在出现在业务代码中，放在xml文件中方便更改
+
+ch6x:Spring-Mybatis 整合    数据库使用Bean配置交给Spring管理，Sql映射文件用Mybatis
+
