@@ -9,11 +9,11 @@
     </select>
     <!-- 查询所有用户的信息 -->
     <select id="selectAllUser" resultType="com.gwm.po.User">
-        select * from User
+        select * from  user
     </select>
     <!-- 添加一个用户 -->
     <insert id="addUser" parameterType="com.gwm.po.User">
-        insert into User where {name,sex,number} values (#{name},#{sex},#{number})
+        insert into User  (name,sex,number) values (#{name},#{sex},#{number})
     </insert>
 
     <update id="updateUser" parameterType="com.gwm.po.User">
@@ -21,7 +21,7 @@
     </update>
 
     <delete id="deleteUser" parameterType="Integer">
-        delete from User where id = id
+        delete from User where id = #{id}
     </delete>
 
 </mapper>
