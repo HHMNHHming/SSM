@@ -4,12 +4,12 @@ import com.gwm.dao.UserDao;
 import com.gwm.po.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
 import java.util.List;
 
 
 @Controller
 public class UserController {
+
     @Autowired UserDao userDao;
     public void test(){
         //主要下面这些User  调用方法的时候可以自己改变

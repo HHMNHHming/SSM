@@ -16,3 +16,13 @@ ch6:Mybatis半自动映射（Sql映射文件） Sql语句不在出现在业务�
 
 ch6x:Spring-Mybatis 整合    数据库使用Bean配置交给Spring管理，Sql映射文件用Mybatis
 
+​		Spring中Bean自动装配（Spring注解与Spring XML装配的区别）。
+
+​			<1>使用配置文件XML文件中的<context:component-scan>标签，自动扫描Bean即自动装配。
+
+​			<2>@ComponentScan注解只能扫描注解中的@Component组件。这是Spring中组件的思想。
+
+​				使用@ComponentScan注解的时候，它会扫描该包及子包的组件。会把@Component、@Service、				@Repository、@Contoroller注解的类（接口是不行的！）当做JavaBean注入到Spring容器中去。当做·				对象交由Spring容器管理。
+
+​			<3>使用Spring的ApplicationContext上下文加载。xml文件加载ClassPathXmlApplicationContext（）或				者是使用                                                                    注解加载AnnotationConfigApplicationContext（）
+
