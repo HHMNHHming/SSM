@@ -30,6 +30,8 @@ public class ShellSort {
         for (int gap = n / 2; gap > 0; gap = gap / 2) {
             for (int i = gap; i < n; i++) {
                 Integer temp = arr[i];
+                //注意希尔排序是将一个临时元素和那个间隔下的所有的元素作比较
+                //然后会使间隔下序列变的有序
                 for (j = i; j - gap >= 0 && temp.compareTo(arr[j - gap]) < 0; j = j - gap) {
                     arr[j] = arr[j - gap];
                 }
