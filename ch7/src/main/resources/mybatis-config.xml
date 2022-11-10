@@ -15,7 +15,8 @@
                 <!--&amp;  转义 &-->
                 <!--useUnicode=true 防止编码错误-->
                 <!--characterEncoding=UTF-8 防止中文乱码-->
-                <property name="url" value="jdbc:mysql://localhost:3306/localhost?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/test?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT+8"/>
                 <property name="username" value="root"/>
                 <property name="password" value="123456"/>
             </dataSource>

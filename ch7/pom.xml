@@ -88,5 +88,17 @@
 
     </dependencies>
 
+    <!-- 这里注意   idea不会编译src的java目录的xml文件，需要我们手动打包 -->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>com/gwm/mapper/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
 
 </project>

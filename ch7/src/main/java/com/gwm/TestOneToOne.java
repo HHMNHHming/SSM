@@ -1,5 +1,6 @@
-package com.gwm.controller;
+package com.gwm;
 
+import com.gwm.controller.OneToOneController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

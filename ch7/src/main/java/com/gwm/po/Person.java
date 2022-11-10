@@ -7,7 +7,8 @@ public class Person {
     private Integer id;
     private  String name;
     private Integer age;
-    private Idcard idcard;
+
+    private Idcard card;
 
     public Integer getId() {
         return id;
@@ -33,12 +34,12 @@ public class Person {
         this.age = age;
     }
 
-    public Idcard getIdcard() {
-        return idcard;
+    public Idcard getCard() {
+        return card;
     }
 
-    public void setIdcard(Idcard idcard) {
-        this.idcard = idcard;
+    public void setCard(Idcard card) {
+        this.card = card;
     }
 
     @Override
@@ -47,7 +48,7 @@ public class Person {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", idcard=" + idcard +
+                ", card=" + card +
                 '}';
     }
 }
