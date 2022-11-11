@@ -14,6 +14,8 @@ ch5:Spring对数据库的基本操作   jdbcTemplate的简单用法    ~~引出�
 
 ch6:Mybatis半自动映射（Sql映射文件） Sql语句不在出现在业务代码中，放在xml文件中方便更改
 
+​		使用Mybatis-config.xml的数据库配置，使用Mybatis原始的SqlSessionFactory接口来访问数据库
+
 ch6x:Spring-Mybatis 整合    数据库使用Bean配置交给Spring管理，Sql映射文件用Mybatis
 
 ​		Spring中Bean自动装配（Spring注解与Spring XML装配的区别）。
@@ -22,7 +24,7 @@ ch6x:Spring-Mybatis 整合    数据库使用Bean配置交给Spring管理，Sql�
 
 ​			<2>@ComponentScan注解只能扫描注解中的@Component组件。这是Spring中组件的思想。
 
-​				使用@ComponentScan注解的时候，它会扫描该包及子包的组件。会把@Component、@Service、				@Repository、@Contoroller注解的类（接口是不行的！）当做JavaBean注入到Spring容器中去。当做·				对象交由Spring容器管理。
+​				使用@ComponentScan注解的时候，它会扫描该包及子包的组件。会把@Component、@Service、				@Repository、@Contoroller注解的类（接口是不行的！）当做JavaBean注入到Spring容器中去。当做				对象交由Spring容器管理。
 
 ​			<3>使用Spring的ApplicationContext上下文加载。xml文件加载ClassPathXmlApplicationContext（）或				者是使用                                                                    注解加载AnnotationConfigApplicationContext（）
 

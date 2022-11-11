@@ -27,7 +27,7 @@ public class Idcard {
     public String toString() {
         return "Idcard{" +
                 "id=" + id +
-                ", code='" + code + '\'' +
+                ", code=" + code +
                 '}';
     }
 }
