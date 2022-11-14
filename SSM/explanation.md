@@ -28,7 +28,7 @@ ch6x:Spring-Mybatis 整合    数据库使用Bean配置交给Spring管理，Sql�
 
 ​			<3>使用Spring的ApplicationContext上下文加载。xml文件加载ClassPathXmlApplicationContext（）或				者是使用                                                                    注解加载AnnotationConfigApplicationContext（）
 
-​		Mybatis中的级联查询:一对一，一对多和多对多三种对应关系。JavaBean属性和查询的结果对应关系。
+​		Mybatis中的级联查询:一对一，一对多和多对多三种对应关系。数据库实体（JavaBean）之间的关系
 
 ch7：一对一的对应关系。典型的就是  人和身份证；
 
