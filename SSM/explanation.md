@@ -30,5 +30,11 @@ ch6x:Spring-Mybatis 整合    数据库使用Bean配置交给Spring管理，Sql�
 
 ​		Mybatis中的级联查询:一对一，一对多和多对多三种对应关系。JavaBean属性和查询的结果对应关系。
 
+ch7：一对一的对应关系。典型的就是  人和身份证；
+
 ch7oneToMore: Mybatis中 一对多的级联查询   一对一的查询在上面文件夹中显示了。主要是体现在标签和sql上
+
+​		一对多：根据用户的id去查，用户的订单。用户和订单的对应关系是一对多；
+
+ch7moreToMore: Mybatis中 多对多的级联查询   查询Orders和Product所有的数据，这两者之间的关系是多对多的。
 

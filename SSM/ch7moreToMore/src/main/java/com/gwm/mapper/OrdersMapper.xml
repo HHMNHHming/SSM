@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gwm.dao.OrdersDao">
+    <!-- 多对多关联查询  查询所有的订单及每个订单中对应的产品信息  -->
+
+    <resultMap id="allOrdersAndProducts" type="com.gwm.po.Orders">
+        <id property="id" column="id"/>
+        <result property="ordersn" column="ordersn"/>
+        <collection property="products" ofType="com.gwm.po.Product">
+            <id property="id" column="pid"/>
+            <result property="name" column="name"/>
+            <result property="price" column="price"/>
+        </collection>
+    </resultMap>
+
+
+    <!--  注意这个表中的id会很多，导致有点乱，但是分清楚就好了  -->
+    <!--  比如下面的o.id和p.id  加入不起别名,数据库中都叫id  -->
+    <select id="selectAllOrdersAndProducts"  resultMap="allOrdersAndProducts">
+        select o.id,o.ordersn,p.id as pid,p.name,p.price
+        from orders o,orders_detail od,product p
+        where o.id=od.orders_id
+        and p.id=od.product_id;
+    </select>
+
+
+</mapper>
