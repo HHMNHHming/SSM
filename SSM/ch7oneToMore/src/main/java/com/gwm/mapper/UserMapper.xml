@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gwm.dao.UserDao">
+    <!-- 根据id查询一个用户的信息 -->
+    <select id="selectUserById" parameterType="Integer" resultType="com.gwm.po.User">
+        select * from User where id = #{id}
+    </select>
+    <!-- 查询所有用户的信息 -->
+    <select id="selectAllUser" resultType="com.gwm.po.User">
+        select * from  user
+    </select>
+    <!-- 添加一个用户 -->
+    <insert id="addUser" parameterType="com.gwm.po.User">
+        insert into User  (id,name,sex,number) values (#{id},#{name},#{sex},#{number})
+    </insert>
+
+    <update id="updateUser" parameterType="com.gwm.po.User">
+        update User set name = #{name},sex = #{sex},number = #{number} where id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="Integer">
+        delete from User where id = #{id}
+    </delete>
+
+    <!--先定义结果集 用来承接结果-->
+    <resultMap id="userAndOrders1" type="com.gwm.po.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="sex" column="sex"/>
+        <result property="number" column="number"/>
+        <!--ofType指定的是list中存取的元素的类型-->
+        <collection property="ordersList" ofType="com.gwm.po.Orders" column="id"
+                    select="com.gwm.dao.OrdersDao.selectOrdersById"/>
+
+    </resultMap>
+
+    <!--执行sql语句，得到想要的方法 -->
+    <select id="selectUserOrdersById" parameterType="Integer" resultMap="userAndOrders1" >
+        select * from user where id =#{id}
+    </select>
+    
+
+</mapper>
