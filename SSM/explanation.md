@@ -38,3 +38,10 @@ ch7oneToMore: Mybatis中 一对多的级联查询   一对一的查询在上面�
 
 ch7moreToMore: Mybatis中 多对多的级联查询   查询Orders和Product所有的数据，这两者之间的关系是多对多的。
 
+ch9：springmvc应用 1、dispathServlet  2、映射器   3、控制器  4、视图解析器 5、客户端
+
+   这个web应用配置坑实在是多！
+
+   建议使用idea的付费版开发，社区版会非常的麻烦。注意编译后的文件classes是不是空、配置tomcat、webapp的创建等····
+
+   这章让我认识到了springmvc的工作流程，以及一个简单的springmvc使用社区版的创建过程。
