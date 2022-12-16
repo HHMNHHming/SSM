@@ -45,3 +45,15 @@ ch9：springmvc应用 1、dispathServlet  2、映射器   3、控制器  4、视
    建议使用idea的付费版开发，社区版会非常的麻烦。注意编译后的文件classes是不是空、配置tomcat、webapp的创建等····
 
    这章让我认识到了springmvc的工作流程，以及一个简单的springmvc使用社区版的创建过程。
+
+ch10：Springmvc的控制器Controller
+
+​	主要是SpringMVC的@RequestMapping、ServletAPi的参数讲解、@PathVariable、@RequestParam、@ModelAttribute 一些请求注解的初步认识。
+
+​    转发是服务器内部的行为，转发必须是同一个Servlet容器下的URL，用户没感知。
+
+​	重定向是客户端的行为，重定向是用户对服务器的二次请求，用户感受到地址栏的变化。
+
+ch11a：SpringMVC前后端数据类型使用Converter接口实现相互转化。
+
+ch11b：SpringMVC前后端数据类型使用Formatter接口实现相互转化。
