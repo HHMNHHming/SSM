@@ -43,4 +43,8 @@ public class UserController {
         }
 
     }
+
+    public void hello(){
+        System.out.println("这是UserController的hello方法，say hello");
+    }
 }
