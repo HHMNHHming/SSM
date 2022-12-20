@@ -59,3 +59,7 @@ ch10：Springmvc的控制器Controller
 ch11a：SpringMVC前后端数据类型使用Converter接口实现相互转化。
 
 ch11b：SpringMVC前后端数据类型使用Formatter接口实现相互转化。
+
+​	指定的数据类型可以通过接口自动实现，像Date数据类型的就要自己手动实现。
+
+ch12：数据绑定和表单标签库
