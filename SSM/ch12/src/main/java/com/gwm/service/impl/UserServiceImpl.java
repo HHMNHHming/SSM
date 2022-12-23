@@ -3,9 +3,11 @@ package com.gwm.service.impl;
 
 import com.gwm.pojo.User;
 import com.gwm.service.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class UserServiceImpl implements UserService {
     private  static ArrayList<User> users = new ArrayList<User>();
     @Override

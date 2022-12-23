@@ -22,7 +22,7 @@ import java.util.HashMap;
 public class UserController {
     @Autowired UserService userService;
     private static final Log logger = LogFactory.getLog("UserController.class");
-    @RequestMapping("/inputUser")
+    @RequestMapping("/input")
     public String inputUser(Model model){
         //使用SpringContext的ui下的Model接口
         HashMap<String,String> hobby =new HashMap<String,String>();

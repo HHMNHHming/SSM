@@ -18,7 +18,7 @@
     </bean>
 
     <!-- 通过扫描注解@来注入spring容器   -->
-    <context:component-scan base-package="com.gwm.controller"/>
+    <context:component-scan base-package="com.gwm"/>
 
 
 
