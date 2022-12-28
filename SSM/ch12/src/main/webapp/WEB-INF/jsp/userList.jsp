@@ -1,16 +1,17 @@
-<%@ page language="java" contextType="text/html"; charset="UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html;  charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transition//EN"
 "http://www.w3c.org/TR/html4/loose.dtd">
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
 <title>users</title>
 </head>
 <body>
     <h1>用户列表</h1>
-    <a href="<c:url value="=${pageContext.request.contextPath }/user/input"/>">继续添加</a>
+    <!-- 这个mvc转换器会转换的时候会带着ip和项目名 -->
+    <a href="<c:url value="/user/input"/>">继续添加</a>
     <table>
         <tr>
             <th>用户名</th>

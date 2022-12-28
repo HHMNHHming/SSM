@@ -42,10 +42,11 @@ public class UserController {
 //            return "添加失败";
 //        }
     }
-    @RequestMapping("/addUser")
+    @RequestMapping("/save")
     public String addUser(@ModelAttribute User user, Model model){
         if(userService.addUser(user)){
             logger.info("添加成功");
+            return "redirect:/user/list";
         }
         else{
             logger.info("添加失败");
