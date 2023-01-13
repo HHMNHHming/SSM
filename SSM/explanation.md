@@ -63,3 +63,17 @@ ch11b：SpringMVC前后端数据类型使用Formatter接口实现相互转化。
 ​	指定的数据类型可以通过接口自动实现，像Date数据类型的就要自己手动实现。
 
 ch12：数据绑定和表单标签库
+
+ch12b:Spring mvc提供Controller请求转发，json自动转换等功能 ；
+
+​			<mvc:annotation-driven>会自动注册RequestMappingHandlerMapping与RequestMappingHandlerAdapter两个Bean,这是Spring MVC为@Controller分发请求所必需的，并且提供    了数据绑定支持，@NumberFormatannotation支持，@DateTimeFormat支持,@Valid支持读写XML的支  持（JAXB）和读写JSON的支持（默认Jackson）等功能。
+
+ch13:拦截器的执行流程，一个拦截器；多个拦截器。
+
+​			全局拦截器，局部拦截器。在mvc的配置文件中配置。
+
+ch13b:用户登录权限验证，这个案例成功地用到了拦截器。
+
+​			在控制器请求到方法之前，进行了用户权限的拦截。避免用户在没有登录的情况下，已知了服务器内      	部的路径，恶意访问到不该访问到的资源。
+
+ ch17:基于表单的 单文件上传
